@@ -1,10 +1,9 @@
 <?php
 
-use yii\helpers\Html;
-use yii\widgets\ActiveForm;
 use common\models\Massagetype;
 use yii\helpers\ArrayHelper;
-use kartik\file\FileInput;
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Work */

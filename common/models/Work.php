@@ -27,6 +27,7 @@ use yii\web\UploadedFile;
  * @property Address $workAddress
  * @property User $workUser
  * @property string $timework
+ * @property string $rod
  */
 class Work extends \yii\db\ActiveRecord
 {

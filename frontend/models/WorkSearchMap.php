@@ -19,7 +19,7 @@ class WorkSearchMap extends Work
     {
         return [
             [['id','money1', 'work_user_id', 'work_created_at', 'work_status', 'work_address_id'], 'integer'],
-            [['name_office', 'massagetype','description','img','location','money1','work_created_at','address_search', 'work_status','geo_id','province_id','amphur_id','district_id' ], 'safe'],
+            [['name_office', 'massagetype','description','img','location','money1','work_created_at','address_search', 'work_status','geo_id','province_id','amphur_id','district_id','rod' ], 'safe'],
         ];
     }
 
@@ -66,10 +66,14 @@ class WorkSearchMap extends Work
         //    'work_user_id' => $this->work_user_id,
          //   'work_created_at' => $this->work_created_at,
            'work_status' => $this->work_status,
+           'rod' => $this->rod
            // 'work_address_id' => $this->work_address_id,
            // 'workAddress.province_name' =>$this->address_search,
         ]);
-
+//         if ($this->rod != null){
+//             var_dump($this->rod);die(); 
+//         }
+        
         $query->andFilterWhere(['like', 'name_office', $this->name_office])
             ->andFilterWhere(['like', 'description', $this->description])
             ->andFilterWhere(['<=','money1',$this->money1])

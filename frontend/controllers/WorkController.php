@@ -160,11 +160,10 @@ class WorkController extends Controller
         $searchModel = new WorkSearchMap();
      
         if (\Yii::$app->user->isGuest) $this->layout = 'main3';
+               
         $dataProvider = $searchModel->search(Yii::$app->request->post());
-        //var_dump($searchModel);die();
         $count = $dataProvider->count;
-        //var_dump($count);die();
-        //  $model = WorkSearchMap::find()->all();
+        
         return $this->render('work-search-map',[
             'searchModel' => $searchModel,
             'dataProvider'=>$dataProvider,

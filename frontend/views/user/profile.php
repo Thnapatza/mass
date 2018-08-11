@@ -1,5 +1,4 @@
 <?php
-use common\models\Joinhangout;
 use kartik\file\FileInput;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;

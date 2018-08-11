@@ -1,8 +1,10 @@
 
 @font-face {
-    font-family: 'thsarabunnew';
-    src: url('../font/Quark-Bold.otf'),
-    	 url('../font/Quark-Light.otf');
+    font-family: 'Prompt';
+    src: url('@web/font/font/prompt/font/Prompt-Regular.otf'),
+    	url('@web/font/font/prompt/font/Prompt-Bold.otf'),
+    	url('@web/font/font/prompt/font/Prompt-Medium.otf'),    	
+    	 url('@web/font/font/prompt/font/Prompt-Italic.otf');
     	/* 	url('/font/RSU_Regular.ttf'); */
     	/* 	url('/font/thaisanslite_r1.otf'),
     		url('/font/thaisanslite_r1.ttf'); */
@@ -15,8 +17,11 @@
  
 }
 html{
-	font-family:"thsarabunnew";
+	font-family:"Prompt";
 }
-body,label,a,b,u,i,span,button,h1,h2,h3,h4,h5,h6,u,i,b {
-	font-family:"thsarabunnew";
+body,label,a,b,u,i,span,button,h1,h2,h3,h4,h5,h6,u,i,b,p {
+	font-family:"Prompt";
+}
+.container {
+	font-family:"Prompt";
 }

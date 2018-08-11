@@ -126,34 +126,32 @@ foreach($dataProvider->models as $data):
 	<h3>ค้นหาตามความต้องการ</h3>
   <?php $form = \yii\widgets\ActiveForm::begin(['options' => ['data-pjax' => true ]]); ?>
   		<div class="row">
-  	
-  					<div class="col-md-4">
-          					  <?=$form->field($searchModel, 'name_office')->textInput(['placeholder'=>'ชื่อสถานที่ สปา อาบอบนวด....'])?>
-  					</div>
-  						<div class="col-md-3">
-          					 <?= $form->field($searchModel, 'location')->textInput(
-                                       ['maxlength' => true,'placeholder'=>'ชื่อจังหวัด อำเภอ ตำบล...']
-          					     );
-                                   
-                            ?>
-  					</div>
-  							<div class="col-md-2">
-  						<?php echo  $form->field($searchModel, 'massagetype')->dropDownList(
-                			             ArrayHelper::map(Massagetype::find()->all(), 'massage', 'massage'),
+  			<div class="col-md-4">
+          		<?=$form->field($searchModel, 'name_office')->textInput(['placeholder'=>'ชื่อสถานที่ สปา อาบอบนวด....'])?>
+  			</div>
+  			<div class="col-md-3">
+          		<?= $form->field($searchModel, 'location')->textInput(['maxlength' => true,'placeholder'=>'ชื่อจังหวัด อำเภอ ตำบล...']);?>
+  			</div>
+  			<div class="col-md-2">
+  				<?php echo  $form->field($searchModel, 'massagetype')->dropDownList(
+                                    ArrayHelper::map(Massagetype::find()->all(), 'massage', 'massage'),
                         			       [
                         			           'prompt' => 'ประเภทการนวด',
-                        			       ]
-                        			       );
-                              ?>
-  							</div>
-  							   <div class="col-md-2"><br>
-  							<a href="#demo" data-toggle="collapse" class="btn btn-default btn-block">ค้นหาเพิ่มเติม <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-  					
-  					</div>  	
-  					 <div class="col-md-2"><br>
-  							 <?= Html::submitButton( 'ค้นหา <span class="glyphicon glyphicon-search"></span>' , ['class' => 'btn btn-warning btn-block']) ?>
-  					</div>
+                        			       ]);
+                ?>
+  			</div>
+			<div class="col-md-2"><br>
+				<a href="#demo" data-toggle="collapse" class="btn btn-default btn-block">ค้นหาเพิ่มเติม <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+			</div>  				
   		</div> <!-- end row -->
+  		<div class="row">
+  			<div class="col-md-9">
+  				<?= $form->field($searchModel, 'rod')->checkBox(['label' => 'มีลานจอดรถ', 'uncheck' => null, 'checked' => true]); ?>
+  			</div>
+  			<div class="col-md-2">
+				<?= Html::submitButton( 'ค้นหา <span class="glyphicon glyphicon-search"></span>' , ['class' => 'btn btn-warning btn-block']) ?>
+			</div>
+  		</div>  		
 
   					
 </div> <!-- end collapsible -->
